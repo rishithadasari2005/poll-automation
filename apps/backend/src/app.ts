@@ -24,4 +24,8 @@ io.on('connection', socket => {
 setSocketServer(io);
 connectDB();
 const PORT = process.env.PORT || 5000;
+app.get('/', (req, res) => {
+  res.send('Poll Automation Backend is running!');
+});
+
 server.listen(PORT, () => console.log(`Backend running at http://localhost:${PORT}`));
